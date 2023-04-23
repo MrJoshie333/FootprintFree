@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -65,6 +64,7 @@
   <header class="w3-container w3-red w3-center" style="padding:64px 16px">
     <h1 class="w3-margin w3-jumbo">FootprintFree</h1>
     <p class="w3-xlarge">A Project by Simon Edmunds and Joshua Santy</p>
+    <p> Calculate your Carbon Emissions based on Distance Travelled and Vehicle Gas Mileage </p>
   </header>
 
   <div class="container-fluid">
@@ -72,11 +72,14 @@
       <div class="col-4 black">
 
         <div id="distance-box">
-          Distance: <span id="myText"></span>
+          Distance: <span id="myText" style="font-size: 16px; font-family: 'Lato', sans-serif;"></span>
           <br>
         </div>
 
+
+
         <div id="map"></div>
+
         
       </div>
 
@@ -84,12 +87,75 @@
 
       <div class="rightSide col-8">
 
-        <div id="result-box">
+    <!--
+      <div id="question-box">
+        
+        <div id="vehicle-list" class="list-group">
+          <li class="list-group-item" data-value="0" data-target="secondaryDropdown1">Car/Economy Vehicle
+          </li>
+          <li class="list-group-item" data-value="1" data-target="secondaryDropdown2">Motorcycle</li>
+          <li class="list-group-item" data-value="2" data-target="secondaryDropdown3">Semi Truck</li>
+        </div>
 
-          <form>
-		<label for="gas-mileage-input">Enter Gas Mileage (e.g. 24):</label>
-		<input type="number" id="gas-mileage-input" name="gas-mileage">
-		<button type="button" id="submit-button">Submit</button>
+        <div id="secondaryDropdown1" class="dropdown hide">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="secondaryDropdownButton1"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Select an option
+          </button>
+          <div class="dropdown-menu" aria-labelledby="secondaryDropdownButton1">
+            <a class="dropdown-item" data-value="2022 Toyota Corolla">2022 Toyota Corolla</a>
+            <a class="dropdown-item" data-value="2022 Toyota Camry">2022 Toyota Camry</a>
+            <a class="dropdown-item" data-value="2022 Honda Civic">2022 Honda Civic</a>
+            <a class="dropdown-item" data-value="1965 Ford Mustang">1965 Ford Mustang</a>
+            <a class="dropdown-item" data-value="2021 Chevrolet Silverado 1500 (Pickup truck)">2021 Chevrolet Silverado 1500 (Pickup truck)</a>
+            <a class="dropdown-item" data-value="2022 Subaru Outback">2022 Subaru Outback</a>
+            <a class="dropdown-item" data-value="2021 Jeep Wrangler">2021 Jeep Wrangler</a>
+            <a class="dropdown-item" data-value="2022 Ford F-150">2022 Ford F-150</a>
+            <a class="dropdown-item" data-value="2020 Kia Optima">2020 Kia Optima</a>
+            <a class="dropdown-item" data-value="2021 Nissan Altima">2021 Nissan Altima</a>
+          </div>
+        </div>
+
+        <div id="secondaryDropdown2" class="dropdown hide">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="secondaryDropdownButton2"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Select an option
+          </button>
+          <div class="dropdown-menu" aria-labelledby="secondaryDropdownButton2">
+            <a class="dropdown-item" data-value="">Harley-Davidson Sportster 883</a>
+            <a class="dropdown-item" data-value="">Honda CBR500R</a>
+            <a class="dropdown-item" data-value="">Kawasaki Ninja 650</a>
+            <a class="dropdown-item" data-value="">Yamaha YZF-R6</a>
+            <a class="dropdown-item" data-value="">Suzuki GSX</a>
+            <a class="dropdown-item" data-value="">BMW R 1200 GS</a>
+          </div>
+        </div>
+
+        <div id="secondaryDropdown3" class="dropdown hide">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="secondaryDropdownButton3"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Select an option
+          </button>
+          <div class="dropdown-menu" aria-labelledby="secondaryDropdownButton3">
+            <a class="dropdown-item" data-value="">Empty truck (no load)</a>
+            <a class="dropdown-item" data-value="">Light load (5,000-20,000 lbs)</a>
+            <a class="dropdown-item" data-value="">Medium load (20,000-40,000 lbs)</a>
+            <a class="dropdown-item" data-value="">Heavy load (40,000-60,000 lbs)</a>
+            <a class="dropdown-item" >Very heavy load (>60,000 lbs)</a>
+          </div>
+        </div>
+      </div>
+
+        -->
+        <br>
+        <!--<div id="result-box"> -->
+    <p> <span style="font-size: 24px; font-family: 'Lato', sans-serif;"> Click two points on the map, enter your Gas Mileage, and press Submit  </span> </p> 
+        <p> (Use ctrl + scroll to zoom)</p> <br>
+         
+  <form>
+		      <label for="gas-mileage-input" style="font-size: 16px; font-family: 'Lato', sans-serif;">Enter Gas Mileage (e.g. 24):</label>
+      		<input type="number" id="gas-mileage-input" name="gas-mileage">
+      		<button type="button" id="submit-button">Submit</button>
 	</form>
 
 <script src="mapStuff.js"></script>
@@ -98,7 +164,7 @@
           src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA06OWTP7pfWxNYxuEsnMM-ztDQq-HehbA&callback=initMap"></script>
 
           
-          <div>Your Distance: <span id="reshow"></span> mi<br>Your Gas Mileage: <span id="gm"></span> mi / gal<br>Your CO<sub>2</sub> Emissions (kg): <span id="CO2"></span> kg<br>Trees Saved: <span id="trees"></span></div>
+          <div style="font-size: 16px; font-family: 'Lato', sans-serif;">Your Distance: <span id="reshow"></span> mi<br>Your Gas Mileage: <span id="gm"></span> mi / gal<br>Your CO<sub>2</sub> Emissions (kg): <span id="CO2"></span> kg<br>Trees Saved by walking: <span id="trees"></span><br></div>
         </div>
         
     <script src="form.js"></script>
@@ -215,6 +281,8 @@
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+
+      <script src="equationStuff.js"></script>
 
 </body>
 
