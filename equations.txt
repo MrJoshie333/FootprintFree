@@ -1,0 +1,55 @@
+GASOLINE:
+
+CO2 emission per gallon: 8887 g/Gal
+Gallons of gas consumed during trip: (x mi) / (y mpg) = z gal
+CO2 emission for total trip: 8887 g/Gal * z gal = 8887*z grams
+
+g CO2 saved by 1 tree per year: 21772.4 g/year
+Trees saved per year: (8887 * z) / (21772.4) = 0.4082 * z trees saved per year
+/----------------------------------------------------/
+
+Walking and Biking Calorie Calculator:
+
+Walking: 100 cal * x miles = num_calories_burned_walking
+Biking: 50 cal * x miles = num_calories_burned_biking
+
+/----------------------------------------------------/
+Miles Per Gallon of various vehicles
+
+***Car***
+2022 Toyota Corolla: City MPG - 31, Highway MPG - 40
+2022 Toyota Camry: City MPG - 28, Highway MPG - 39
+2022 Honda Civic: City MPG - 33, Highway MPG - 42
+1965 Ford Mustang: City MPG - 14, Highway MPG - 17
+2021 Chevrolet Silverado 1500 (Pickup truck): City MPG - 23, Highway MPG - 33
+2022 Subaru Outback: City MPG - 26, Highway MPG - 33
+2021 Jeep Wrangler: City MPG - 17, Highway MPG - 25
+2022 Ford F-150: City MPG - 19, Highway MPG - 24
+2020 Kia Optima: City MPG - 40, Highway MPG - 45
+2021 Nissan Altima: City MPG - 28, Highway MPG - 39
+
+***Motorcycles***
+Harley-Davidson Sportster 883 - 49 MPG
+Honda CBR500R - 65.7 MPG
+Kawasaki Ninja 650 - 57.6 MPG
+Yamaha YZF-R6 - 39.9 MPG
+Suzuki GSX-R750 - 40 MPG
+BMW R 1200 GS - 48 MPG
+
+***Semi Truck based on weight***
+Empty truck (no load): 6.5 MPG
+Light load (5,000-20,000): 6 MPG
+Medium load (20,000-40,000): 5 MPG
+Heavy load (40,000-60,000): 4 MPG
+Very heavy load (>60,000): 3 MPG
+
+/----------------------------------/
+Links:
+  Instagram - https://www.instagram.com/FootprintFree1/
+
+
+
+Resources:
+https://shrinkthatfootprint.com/calculate-your-driving-emissions/#:~:text=Fuel%20combustion%20emissions%20can%20be%20calculated%20using%20the%20emissions%20factor,kg%20CO2e%2Flitre.
+https://www.internationaltrucks.com/en/blog/fuel-economy-weight
+https://www.fuelly.com/motorcycle

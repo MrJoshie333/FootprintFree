@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Footprint Free</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Lato", sans-serif
+    }
+
+    .w3-bar,
+    h1,
+    button {
+      font-family: "Montserrat", sans-serif
+    }
+
+    .fa-anchor,
+    .fa-car {
+      font-size: 200px
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div class="w3-top">
+    <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red"
+        href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <!--<a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 1</a>
+      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 2</a>
+      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 3</a>
+      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 4</a> -->
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+      <!--<a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a> -->
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="w3-container w3-red w3-center" style="padding:64px 16px">
+    <h1 class="w3-margin w3-jumbo">FootprintFree</h1>
+    <p class="w3-xlarge">A Project by Simon Edmunds and Joshua Santy</p>
+  </header>
+
+  <div class="container-fluid">
+    <div class="row justify-content-center p-3">
+      <div class="col-4 black">
+
+        <div id="distance-box">
+          Distance: <span id="myText"></span>
+          <br>
+        </div>
+
+        <div id="map"></div>
+        
+      </div>
+
+      <!-- Right side box (besides the map)-->
+
+      <div class="rightSide col-8">
+
+        <div id="result-box">
+
+          <form>
+		<label for="gas-mileage-input">Enter Gas Mileage (e.g. 24):</label>
+		<input type="number" id="gas-mileage-input" name="gas-mileage">
+		<button type="button" id="submit-button">Submit</button>
+	</form>
+
+<script src="mapStuff.js"></script>
+
+        <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA06OWTP7pfWxNYxuEsnMM-ztDQq-HehbA&callback=initMap"></script>
+
+          
+          <div>Your Distance: <span id="reshow"></span> mi<br>Your Gas Mileage: <span id="gm"></span> mi / gal<br>Your CO<sub>2</sub> Emissions (kg): <span id="CO2"></span> kg<br>Trees Saved: <span id="trees"></span></div>
+        </div>
+        
+    <script src="form.js"></script>
+        
+    </div>
+
+      <!-- Other Stuff (Not used yet)-->
+
+      <div class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content">
+          <div class="w3-twothird">
+            <h1>FootprintFree: CO<sub>2</sub> Emission Calculator</h1>
+            <h4 class="w3-padding-32">&emsp;Vehicle emissions, including carbon dioxide (CO<sub>2</sub>) and other greenhouse
+              gases,
+              released
+              during the burning of fossil fuels like gasoline or diesel, pose environmental concerns. These emissions
+              contribute to air pollution and can have adverse effects on air quality and human health. Reducing carbon
+              emissions from vehicles is imperative in mitigating these negative impacts.</h5>
+
+              <h4 class="w3-padding-32">&emsp;The FootprintFree calculator determines the carbon emission of different
+                vehicles based on the
+                distance driven.
+                Utilize the Google Maps widget to select two destinations
+                and quickly determine the distance in miles. The
+                app also calculates the carbon emissions based on the distance and your vehicle's miles per gallon
+                (MPG). </h5>
+                <h4 class="w3-padding-32"> &emsp; Additionally, it shows you how many trees could be saved by walking
+                  instead of driving. Gain insight into the environmental impact of your trips and make eco-friendly
+                  choices
+                  with our convenient and informative web app. Try it now and start making a positive impact on the
+                  planet!
+                  </h5>
+          </div>
+
+
+          <div class="w3-third w3-center">
+            <i class="fa fa-car fa-5x"></i>
+            </i>
+            <!--<i class="fa fa-anchor fa-10x w3-padding-64 w3-text-red"></i> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Grid -->
+      <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container ">
+        <div class="w3-content">
+          <div class="w3-third w3-center">
+
+            
+
+          </div>
+          <div class="w3-rest text-center">
+            <h1>About the Programmers</h1>
+            <h5 class="w3-padding-32 text-center">The FootprintFree creators, Joshua Santy and Simon Edmunds, who are both two
+              talented developers, teamed up for the 2023 Missouri S&T Hackathon Event called "Pickhacks." With this
+              year's theme being "Environment" and 39 hours on the clock, and Josh and Simon sought out to create an
+              innovative web app that could calculate carbon emissions using Angular Google Maps API. Due to the steep,
+              and I mean steep, learning curve of AngularJS, the duo wisely opted to compile their code in Replit
+              without Angular. Their app, aptly named 'FootprintFree', provides users with an easy-to-use tool to
+              estimate the CO<sub>2</sub> emissions of their travel routes. By simply clicking their starting and ending
+              destinations, the app calculates the distance in miles, factors in a vehicle's miles per gallon (MPG)
+              provided by the user, and presents the estimated carbon emissions. The Footprint Free app can help raise
+              awareness about carbon emissions from transportation and promote sustainable travel choices. </h5>
+<!--400x500 -->
+          <div class="w3-rest text-center">
+            <img src="images/Josh_1.jpg">
+            <img src="images/simon.jpg">
+            <!-- <p class="w3-text-grey"></p> -->
+        </div>
+          </div>
+        </div>
+      </div>
+
+      
+      
+    </div> </div>
+
+
+
+      <!-- Footer -->
+      <footer class="w3-container w3-padding-64 w3-center w3-opacity">
+        <div class="w3-xlarge w3-padding-32">
+          <i class="fa fa-facebook-official w3-hover-opacity"></i>
+          <a href="https://www.instagram.com/footprintfree1" target="_blank" rel="noopener noreferrer">
+            <i class="fa fa-instagram w3-hover-opacity"></i>
+          </a>
+          <i class="fa fa-snapchat w3-hover-opacity"></i>
+          <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+          <i class="fa fa-twitter w3-hover-opacity"></i>
+          <i class="fa fa-linkedin w3-hover-opacity"></i>
+        </div>
+        <!--<p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p> -->
+      </footer>
+
+      <script>
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function myFunction() {
+          var x = document.getElementById("navDemo");
+          if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+          } else {
+            x.className = x.className.replace(" w3-show", "");
+          }
+        }
+      </script>
+
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
